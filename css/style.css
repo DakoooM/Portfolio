@@ -101,6 +101,7 @@ section:not(:last-child) {
 
 .reset-weight {
   font-weight: 400;
+  font-size: 20px;
 }
 
 .marge-r {
@@ -140,9 +141,9 @@ section:not(:last-child) {
 
 .img-present {
   position: relative;
-  height: 150px;
+  
   user-select: none;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .img-home {
@@ -175,7 +176,7 @@ section:not(:last-child) {
 .comps-present input[type="checkbox"]:checked {
   position: relative;
   appearance: none;
-  padding: 10px 10px;
+  padding: 5px 7px;
   background-color: #005b00;
   outline: none;
   border: none;
@@ -198,7 +199,7 @@ section:not(:last-child) {
 .comps-present input[type="checkbox"]:not(:checked) {
   position: relative;
   appearance: none;
-  padding: 10px 10px;
+  padding: 5px 7px;
   
   background-color: #6d0000;
   outline: none;
@@ -248,7 +249,7 @@ section:not(:last-child) {
 }
 
 .project {
-  padding: 20px;
+  position: relative;padding: 20px;
   color: #fff;
   max-width: 356px;
   user-select: none;
@@ -258,14 +259,10 @@ section:not(:last-child) {
   background-color: #171717;
 }
 
-.project:nth-child(1):hover {
-  background-color: var(--font-color-black-hover);
-  transform: scale(1.05) translateX(-30px);
-}
 
-.project:nth-child(2):hover {
+.project:hover {
   background-color: var(--font-color-black-hover);
-  transform: scale(1.05) translateX(30px);
+  transform: scale(0.97);
 }
 
 .project img {
@@ -329,14 +326,6 @@ section:not(:last-child) {
   height: 100px;
 }
 
-@media screen and (max-width: 768px) {
-  .adns-img {
-    height: 100px;
-  }
-  .github-img {
-    height: 50px;
-  }
-}
 .contact-form {
   
   display: flex;
@@ -406,11 +395,12 @@ section:not(:last-child) {
     padding: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     resize: none;
+    font-family: sans-serif;
 }
 
 .contact-form input:not([type="submit"]):focus, .contact-form textarea:focus {
   background-color: #363a3f;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .footer {
@@ -419,6 +409,10 @@ section:not(:last-child) {
 
 .footer a {
   color: var(--default-blue);
+}
+
+.footer p {
+  margin: 10px;
 }
 
 /* Navigator */
@@ -435,4 +429,43 @@ section:not(:last-child) {
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-blue);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;  
+  }
+  
+  .adns-img {
+    height: 100px;
+  }
+  .github-img {
+    height: 70px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .navbar-link {
+    display: none;
+  }
+
+  .mail-to {
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .reset-weight {
+    font-size: 15px;
+  }
+
+  .footer {
+    padding: 40px;
+    font-size: 13px;
+  }
 }
